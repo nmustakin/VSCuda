@@ -30,7 +30,18 @@
 			"id": "cpp",
 			"extensions": [ ".cpp", "c++"],
 			"aliases": [ "Cpp", "C++", "cpp" ]
-		}]
+		}],
+		"grammars": [{
+            "language": "cuda",
+            "scopeName": "source.cuda-cpp",
+            "path": "./syntaxes/cuda.tmLanguage.json"
+        }],
+        "snippets": [
+            {
+                "language": "cuda",
+                "path": "./snippets/cuda.json"
+            }
+        ]
 	},
 	"scripts": {
 		"lint": "eslint .",
