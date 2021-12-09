@@ -1,81 +1,81 @@
-{
-    "cudaMalloc":{
-        "id": "cudaMalloc",
-        "value": "cudaError_t err = cudaMalloc( , )"
-    },
-    "cudaMallocHost":{
-        "id": "cudaMallocHost",
-        "value": "cudaError_t err = cudaMallocHost( , )"
-    },
-    "cudaMallocManaged":{
-        "id": "cudaMallocManaged",
-        "value": "​cudaError_t err = cudaMallocManaged( , , )"
-    },
-    "cudaHostAlloc":{
-        "id": "cudaHostAlloc",
-        "value": "​cudaError_t err = cudaHostAlloc( , , )"
-    },
-    "cudaFreeAsync":{
-        "id": "cudaFreeAsync",
-        "value": "​cudaError_t err = cudaFreeAsync( , )"
-    },
-    "cudaMallocAsync":{
-        "id": "cudaMallocAsync",
-        "value": "​cudaError_t err = cudaMallocAsync( , , )"
-    },
-    "cudaFree":{
-        "id": "cudaFree",
-        "value": "​​cudaError_t err = cudaFree( )"
-    },
-    "cudaFreeHost":{
-        "id": "cudaFreeHost",
-        "value": "​cudaError_t err = cudaFreeHost( )"
-    },
-    "cudaMemcpy":{
-        "id": "cudaMemcpy",
-        "value": "​cudaError_t err = cudaMemcpy( , , , )",
-        "options": ""
-    },
-    "cudaMemcpyAsync":{
-        "id": "cudaMemcpyAsync",
-        "value": "​​cudaError_t err = cudaMemcpyAsync( , , , , )",
-        "options": ""
-    },
-    "cudaMemset":{
-        "id": "cudaMemset",
-        "value": "​cudaError_t err = cudaMemset( , , )"
-    },
-    "cudaMemPrefetchAsync":{
-        "id": "cudaMemPrefetchAsync",
-        "value": "​cudaError_t err = cudaMemPrefetchAsync( , , , )"
-    },
-    "cudaMemAdvise":{
-        "id": "cudaMemAdvise",
-        "value": "​cudaError_t err = cudaMemAdvise( , , , )",
-        "options": ""
-    },
-    "cudaDeviceSynchronize":{
-        "id": "cudaDeviceSynchronize",
-        "value": "​​cudaError_t err = cudaDeviceSynchronize()"
-    },
-    "cudaGetDevice":{
+[
+    {
         "id": "cudaGetDevice",
-        "value": "​​cudaError_t err = cudaGetDevice( )"
+        "value": "​​cudaGetDevice( )"
     },
-    "cudaGetDeviceCount":{
+    {
         "id": "cudaGetDeviceCount",
-        "value": "​​cudaError_t err = cudaGetDeviceCount( )"
+        "value": "​​cudaGetDeviceCount( )"
     },
-    "cudaGetDeviceFlags":{
+    {
         "id": "cudaGetDeviceFlags",
-        "value": "​cudaError_t err = cudaGetDeviceFlags( )"
+        "value": "​cudaGetDeviceFlags( )"
     },
-    "cudaGetDeviceProperties":{
+    {
         "id": "cudaGetDeviceProperties",
-        "value": "​cudaError_t err = cudaGetDeviceProperties( , )"
+        "value": "​cudaGetDeviceProperties( , )"
     },
-    "cudaChooseDevice":{
+    {
         "id": "cudaChooseDevice",
-        "value": "​cudaError_t err = cudaChooseDevice( , )"
+        "value": "​cudaChooseDevice( , )"
+    },
+    {
+        "id": "cudaMemset",
+        "value": "​cudaMemset( , , )"
+    },
+    {
+        "id": "cudaMemPrefetchAsync",
+        "value": "​cudaMemPrefetchAsync( , , , )"
+    },
+    {
+        "id": "cudaMemAdvise",
+        "value": "​cudaMemAdvise( , , , )",
+        "options": ""
+    },
+    {
+        "id": "cudaHostAlloc",
+        "value": "​cudaHostAlloc( , , )"
+    },
+    {
+        "id": "cudaFreeHost",
+        "value": "​cudaFreeHost( )"
+    }, 
+    {
+        "id": "cudaFreeAsync",
+        "value": "​cudaFreeAsync( , )"
+    },
+    {
+        "id": "cudaMemcpyAsync",
+        "value": "​​cudaMemcpyAsync( , , , ${1|cudaMemcpyHostToDevice,cudaMemcpyDeviceToHost,cudaMemcpyHostToHost,cudaMemcpyDeviceToDevice,cudaMemcpyDefault|}, )",
+        "options": ""
+    },
+    {
+        "id": "cudaMallocAsync",
+        "value": "​cudaMallocAsync( , , )"
+    },
+    {
+        "id": "cudaMallocHost",
+        "value": "cudaMallocHost( , )"
+    },
+    {
+        "id": "cudaMallocManaged",
+        "value": "​cudaMallocManaged( , , )"
+    },
+    {
+        "id": "cudaDeviceSynchronize",
+        "value": "​​cudaDeviceSynchronize()"
+    },
+    {
+        "id": "cudaFree",
+        "value": "​​cudaFree( )"
+    },
+    {
+        "id": "cudaMemcpy",
+        "value": "​cudaMemcpy( , , , ${1|cudaMemcpyHostToDevice,cudaMemcpyDeviceToHost,cudaMemcpyHostToHost,cudaMemcpyDeviceToDevice,cudaMemcpyDefault|})",
+        "options": ""
+    },
+    {
+        "id": "cudaMalloc",
+        "value": "cudaMalloc( , )"
     }
-}
+]
