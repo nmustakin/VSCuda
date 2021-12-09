@@ -52,5 +52,11 @@
       "body": "thrust::device_vector<${1:char}> v$0;",
       "description": "thrust::device_vector",
       "scope": "source.cuda-cpp"
-  }
+  },
+  "cdevsync": {
+    "prefix": "cdevsync",
+    "body": "cudaDeviceSynchronize",
+    "description": "thrust::device_vector",
+    "scope": "source.cuda-cpp"
+    }
 }
