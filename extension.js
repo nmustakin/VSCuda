@@ -28,19 +28,24 @@ function activate(context) {
 
 	let disposableLang = vscode.languages.registerHoverProvider('cuda', {
 		provideHover(document, position, token) {
-			console.log("Hurray! Hover is working");
-			console.log(position.toString());
-			console.log(token.toString());
+			//console.log("Hurray! Hover is working");
+			//console.log(position.toString());
+			//console.log(token.toString());
 
 			const range = document.getWordRangeAtPosition(position);
             const word = document.getText(range);
-			console.log(word);
-			console.log(cudaFuncs[word]);
-			if (word === cudaFuncs[word].id) {
-				console.log("Found: " + word);
-				return new vscode.Hover(cudaFuncs[word].value);
-			} else {
-				console.log("Sorry bro! Found instead: ", word);
+			//console.log(word);
+			//console.log(cudaFuncs[word]);
+			try{
+				if (word === cudaFuncs[word].id) {
+					console.log("Found: " + word);
+					return new vscode.Hover(cudaFuncs[word].value);
+				} else {
+					//console.log("Sorry bro! Found instead: ", word);
+				}
+			}
+			catch(err){
+
 			}
 		}
 	});
