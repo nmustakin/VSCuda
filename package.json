@@ -24,7 +24,8 @@
 		"languages": [{
 			"id": "cuda",
 			"extensions": [".cu"],
-			"aliases": ["Cuda", "cuda"]
+			"aliases": ["Cuda", "cuda"],
+			"configuration": "./language-configuration.json"
 		},
 		{
 			"id": "cpp",

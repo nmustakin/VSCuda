@@ -36,7 +36,7 @@ function activate(context) {
 
 			const range = document.getWordRangeAtPosition(position);
 			const word = document.getText(range);
-			//console.log(word);
+			// console.log(word);
 			//console.log(cudaFuncs[word]);
 			try {
 				if (word === cudaFuncs[word].id) {
