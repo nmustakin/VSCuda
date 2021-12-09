@@ -1,0 +1,174 @@
+{
+    "cuGetErrorName":{
+    "id": "cuGetErrorName", 
+    "value": "cuGetErrorName ( CUresult error, const char** pStr )"
+    },
+    "cuGetErrorString":{
+        "id": "cuGetErrorString",
+        "value": "CUresult cuGetErrorString ( CUresult error, const char** pStr )"
+    }, 
+    "cuInit":{
+        "id": "cuInit",
+        "value": "CUresult cuInit ( unsigned int  Flags )"
+    },
+    "cuDriverGetVersion":{
+        "id": "cuDriverGetVersion",
+        "value": "CUresult cuDriverGetVersion ( int* driverVersion )"
+    },
+    "cuDeviceGet":{
+        "id": "cuDeviceGet",
+        "value": "CUresult cuDeviceGet ( CUdevice* device, int  ordinal )"
+    },
+    "cuDeviceGetAttribute":{
+        "id": "cuDeviceGetAttribute",
+        "value": "CUresult cuDeviceGetAttribute ( int* pi, CUdevice_attribute attrib, CUdevice dev )"
+    },
+    "cuDeviceGetCount":{
+        "id": "cuDeviceGetCount",
+        "value": "CUresult cuDeviceGetCount ( int* count )"
+    },
+    "cuDeviceGetDefaultMemPool":{
+        "id": "cuDeviceGetDefaultMemPool",
+        "value": "CUresult cuDeviceGetDefaultMemPool ( CUmemoryPool* pool_out, CUdevice dev )"
+    },
+    "cuDeviceGetLuid":{
+        "id": "cuDeviceGetLuid",
+        "value": "CUresult cuDeviceGetLuid ( char* luid, unsigned int* deviceNodeMask, CUdevice dev )"
+    },
+    "cuDeviceGetMemPool":{
+        "id": "cuDeviceGetMemPool",
+        "value": "CUresult cuDeviceGetMemPool ( CUmemoryPool* pool, CUdevice dev )"
+    },
+    "cuDeviceGetName":{
+        "id": "cuDeviceGetName",
+        "value": "CUresult cuDeviceGetName ( char* name, int  len, CUdevice dev )"
+    },
+    "cuDeviceGetNvSciSyncAttributes":{
+        "id": "cuDeviceGetNvSciSyncAttributes",
+        "value": "CUresult cuDeviceGetNvSciSyncAttributes ( void* nvSciSyncAttrList, CUdevice dev, int  flags )"
+    },
+    "cuDeviceGetTexture1DLinearMaxWidth":{
+        "id": "cuDeviceGetTexture1DLinearMaxWidth",
+        "value": "CUresult cuDeviceGetTexture1DLinearMaxWidth ( size_t* maxWidthInElements, CUarray_format format, unsigned numChannels, CUdevice dev )"
+    },
+    "cuDeviceGetUuid":{
+        "id": "cuDeviceGetUuid",
+        "value": "CUresult cuDeviceGetUuid ( CUuuid* uuid, CUdevice dev )"
+    },
+    "cuDeviceGetUuid_v2":{
+        "id": "cuDeviceGetUuid_v2",
+        "value": "CUresult cuDeviceGetUuid_v2 ( CUuuid* uuid, CUdevice dev )"
+    },
+    "cuDeviceSetMemPool":{
+        "id": "cuDeviceSetMemPool",
+        "value": "CUresult cuDeviceSetMemPool ( CUdevice dev, CUmemoryPool pool )"
+    },
+    "cuDeviceTotalMem":{
+        "id": "cuDeviceTotalMem",
+        "value": "CUresult cuDeviceTotalMem ( size_t* bytes, CUdevice dev )"
+    },
+    "cuFlushGPUDirectRDMAWrites":{
+        "id": "cuFlushGPUDirectRDMAWrites",
+        "value": "CUresult cuFlushGPUDirectRDMAWrites ( CUflushGPUDirectRDMAWritesTarget target, CUflushGPUDirectRDMAWritesScope scope )"
+    },
+    "cuDevicePrimaryCtxGetState":{
+        "id": "cuDevicePrimaryCtxGetState",
+        "value": "CUresult cuDevicePrimaryCtxGetState ( CUdevice dev, unsigned int* flags, int* active )"
+    },
+    "cuDevicePrimaryCtxRelease":{
+        "id": "cuDevicePrimaryCtxRelease",
+        "value": "CUresult cuDevicePrimaryCtxRelease ( CUdevice dev )"
+    },
+    "cuDevicePrimaryCtxReset":{
+        "id": "cuDevicePrimaryCtxReset",
+        "value": "CUresult cuDevicePrimaryCtxReset ( CUdevice dev )"
+    },
+    "cuDevicePrimaryCtxRetain":{
+        "id": "cuDevicePrimaryCtxRetain",
+        "value": "CUresult cuDevicePrimaryCtxRetain ( CUcontext* pctx, CUdevice dev )"
+    },
+    "cuDevicePrimaryCtxSetFlags":{
+        "id": "cuDevicePrimaryCtxSetFlags",
+        "value": "CUresult cuDevicePrimaryCtxSetFlags ( CUdevice dev, unsigned int  flags )"
+    },
+    "cuCtxCreate":{
+        "id": "cuCtxCreate",
+        "value": "CUresult cuCtxCreate ( CUcontext* pctx, unsigned int  flags, CUdevice dev )"
+    },
+    "cuCtxCreate_v3":{
+        "id": "cuCtxCreate_v3",
+        "value": "CUresult cuCtxCreate_v3 ( CUcontext* pctx, CUexecAffinityParam* paramsArray, int  numParams, unsigned int  flags, CUdevice dev )"
+    },
+    "cuCtxDestroy":{
+        "id": "cuCtxDestroy",
+        "value": "CUresult cuCtxDestroy ( CUcontext ctx )"
+    },
+    "cuCtxGetApiVersion":{
+        "id": "cuCtxGetApiVersion",
+        "value": "CUresult cuCtxGetApiVersion ( CUcontext ctx, unsigned int* version )"
+    },
+    "cuCtxGetCacheConfig":{
+        "id": "cuCtxGetCacheConfig",
+        "value": "CUresult cuCtxGetCacheConfig ( CUfunc_cache* pconfig )"
+    },
+    "cuCtxGetCurrent":{
+        "id": "cuCtxGetCurrent",
+        "value": "CUresult cuCtxGetCurrent ( CUcontext* pctx )"
+    },
+    "cuCtxGetDevice":{
+        "id": "cuCtxGetDevice",
+        "value": "CUresult cuCtxGetDevice ( CUdevice* device )"
+    },
+    "cuCtxGetExecAffinity":{
+        "id": "cuCtxGetExecAffinity",
+        "value": "CUresult cuCtxGetExecAffinity ( CUexecAffinityParam* pExecAffinity, CUexecAffinityType type )"
+    },
+    "cuCtxGetFlags":{
+        "id": "cuCtxGetFlags",
+        "value": "CUresult cuCtxGetFlags ( unsigned int* flags )"
+    },
+    "cuCtxGetLimit":{
+        "id": "cuCtxGetLimit",
+        "value": "CUresult cuCtxGetLimit ( size_t* pvalue, CUlimit limit )"
+    },
+    "cuCtxGetSharedMemConfig":{
+        "id": "cuCtxGetSharedMemConfig",
+        "value": "CUresult cuCtxGetSharedMemConfig ( CUsharedconfig* pConfig )"
+    },
+    "cuCtxGetStreamPriorityRange":{
+        "id": "cuCtxGetStreamPriorityRange",
+        "value": "CUresult cuCtxGetStreamPriorityRange ( int* leastPriority, int* greatestPriority )"
+    },
+    "cuCtxPopCurrent":{
+        "id": "cuCtxPopCurrent",
+        "value": "CUresult cuCtxPopCurrent ( CUcontext* pctx )"
+    },
+    "cuCtxPushCurrent":{
+        "id": "cuCtxPushCurrent",
+        "value": "CUresult cuCtxPushCurrent ( CUcontext ctx )"
+    },
+    "cuCtxResetPersistingL2Cache":{
+        "id": "cuCtxResetPersistingL2Cache",
+        "value": "CUresult cuCtxResetPersistingL2Cache ( void )"
+    },
+    "cuCtxSetCacheConfig":{
+        "id": "cuCtxSetCacheConfig",
+        "value": "CUresult cuCtxSetCacheConfig ( CUfunc_cache config )"
+    },
+    "cuCtxSetCurrent":{
+        "id": "cuCtxSetCurrent",
+        "value": "CUresult cuCtxSetCurrent ( CUcontext ctx )"
+    },
+    "cuCtxSetLimit":{
+        "id": "cuCtxSetLimit",
+        "value": "CUresult cuCtxSetLimit ( CUlimit limit, size_t value )"
+    },
+    "cuCtxSetSharedMemConfig":{
+        "id": "cuCtxSetSharedMemConfig",
+        "value": "CUresult cuCtxSetSharedMemConfig ( CUsharedconfig config )"
+    },
+    "cuCtxSynchronize":{
+        "id": "cuDeviceTotalMem",
+        "value": "CUresult cuCtxSynchronize ( void )"
+    }
+}
