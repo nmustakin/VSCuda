@@ -6,20 +6,20 @@ VS Code extension for CUDA support. Includes syntax highlighting, code help and 
 
 ### Syntax Highlighting
 
-\!\[Syntax Highlighting\]\(gifs/syntax_highlight.png\)
+![Syntax Highlighting](gifs/syntax_highlight.png)
 
 > Highlights CUDA specific specifiers as well as C/C++ syntax
 
 
 ### Code Help
 
-\!\[Code Help\]\(gifs/code-help.png\)
+![Code Help](gifs/code-help.png)
 
 > Shows CUDA function parameters 
 
 ### Code Completion
 
-\!\[Code Completion\]\(gifs/code-completion.png\)
+![Code Completion](gifs/code-completion.png)
 
 > Shows popular CUDA functions for auto-complete along with function parameters in markdown
 
