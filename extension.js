@@ -33,25 +33,48 @@ function activate(context) {
 			//console.log(token.toString());
 
 			const range = document.getWordRangeAtPosition(position);
-            const word = document.getText(range);
+			const word = document.getText(range);
 			//console.log(word);
 			//console.log(cudaFuncs[word]);
-			try{
+			try {
 				if (word === cudaFuncs[word].id) {
 					console.log("Found: " + word);
-					return new vscode.Hover(cudaFuncs[word].value);
+				 new vscode.Hover(cudaFuncs[word].value);
 				} else {
 					//console.log("Sorry bro! Found instead: ", word);
 				}
 			}
-			catch(err){
+			catch (err) {
 
 			}
 		}
 	});
 
+	let disposableReferenceProvider = vscode.languages.registerReferenceProvider("cuda", {
+		provideReferences(document, position, refContext, token) {
+			console.log("Reference provider");
+			const range = document.getWordRangeAtPosition(position);
+			console.log(document.fileName);
+			document.getWor
+			const word = document.getText(range);
+			console.log(word);
+			console.log("refContext");
+			console.log(refContext);
+			console.log("token");
+			console.log(token);
+			console.log("array");
+			console.log("reference provider end!");
+			let loc = new vscode.Location(document.fileName, position);
+			console.log(loc);
+			return vscode.commands.executeCommand('vscode.executeReferenceProvider', document.uri, position);
+			//console.log(loc2);
+			//return loc2;
+		}
+	});
+
 	context.subscriptions.push(disposable);
 	context.subscriptions.push(disposableLang);
+	context.subscriptions.push(disposableReferenceProvider);
 }
 
 // this method is called when your extension is deactivated
