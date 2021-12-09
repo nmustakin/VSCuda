@@ -1,6 +1,8 @@
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
 const vscode = require('vscode');
+// Import the json file which contains the cuda functions such as cudaMemcpy
+const cudaFuncs = require('./cuda-functions.json');
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
@@ -33,13 +35,13 @@ function activate(context) {
 			const range = document.getWordRangeAtPosition(position);
             const word = document.getText(range);
 			console.log(word);
-			if (word === "cudaMemCpy") {
+			console.log(cudaFuncs[word]);
+			if (word === cudaFuncs[word].id) {
 				console.log("Found: " + word);
+				return new vscode.Hover(cudaFuncs[word].value);
 			} else {
 				console.log("Sorry bro! Found instead: ", word);
 			}
-
-			return new vscode.Hover(word);
 		}
 	});
 
