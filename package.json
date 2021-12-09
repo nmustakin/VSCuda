@@ -3,6 +3,11 @@
 	"displayName": "VSCuda",
 	"description": "CUDA code suggestions for VSCode",
 	"version": "0.0.1",
+	"publisher": "nmustakin",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/nmustakin/VSCuda.git"
+	},
 	"engines": {
 		"vscode": "^1.62.0"
 	},
