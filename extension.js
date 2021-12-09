@@ -73,7 +73,7 @@ function activate(context) {
 				const snippetCompletion = new vscode.CompletionItem(element.id);
 				snippetCompletion.insertText = new vscode.SnippetString(element.value);
 				try {
-					snippetCompletion.documentation = new vscode.MarkdownString(cudaFuncs[element.id].value);	
+					snippetCompletion.documentation = new vscode.MarkdownString(cudaFuncs[element.id].value);
 				} catch (err) {
 					console.log(err);
 				}
@@ -84,10 +84,42 @@ function activate(context) {
 		}
 	});
 
+	/*
+	let disposableReferenceProvider = vscode.languages.registerReferenceProvider('cuda', {
+		provideReferences(document, pos, options, token) {
+			//console.log("Hurray! Hover is working");
+			//console.log(position.toString());
+			//console.log(token.toString());
+
+			const range = document.getWordRangeAtPosition(pos);
+			const word = document.getText(range);
+			let target = document.uri;
+			console.log(word);
+			console.log(target);
+			console.log(target.toString());
+			console.log(pos);
+			// return vscode.commands.executeCommand('vscode.executeReferenceProvider', target, pos).then(locations => {
+			// 	locations = locations || [];
+
+			// 	// sort by locations and shuffle to begin from target resource
+			// 	let idx = 0;
+			// 	locations.sort(Provider._compareLocations).find((loc, i) => loc.uri.toString() === target.toString() && !!(idx = i) && true);
+			// 	locations.push(...locations.splice(0, idx));
+
+			// 	// create document and return its early state
+			// 	const document = new ReferencesDocument(uri, locations, this._onDidChange);
+			// 	this._documents.set(uri.toString(), document);
+			// 	console.log(document.value);
+			// 	return document.value;
+			// });
+		}
+	});
+	*/
 	context.subscriptions.push(disposable);
 	context.subscriptions.push(disposableLang);
 	context.subscriptions.push(disposableDef);
 	context.subscriptions.push(disposableCompletionProvider);
+	//context.subscriptions.push(disposableReferenceProvider);
 }
 
 // this method is called when your extension is deactivated
