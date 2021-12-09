@@ -31,6 +31,16 @@ That's it! You can now code in CUDA without having to look up the documentation 
 
 > Shows popular CUDA functions for auto-complete along with function parameters in markdown
 
+### Declarative Language features for CUDA
+
+- Comment toggling
+- Brackets definition
+- Autoclosing
+- Autosurrounding
+- Folding
+- Word pattern
+- Indentation Rules
+
 ## Requirements
 
 VS Code version ^1.62.0
