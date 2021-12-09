@@ -2,6 +2,14 @@
 
 VS Code extension for CUDA support. Includes syntax highlighting, code help and auto code completion.  
 
+## Installation 
+
+Search for __VSCuda__ in Visual Studio Code Extensions Marketplace. 
+
+After installing, select _Cuda_ as your language in the bottom right corner of your IDE. 
+
+That's it! You can now code in CUDA without having to look up the documentation everytime. 
+
 ## Features
 
 ### Syntax Highlighting
@@ -30,7 +38,12 @@ VS Code version ^1.62.0
 
 ## Release Notes
 
-
 ### 0.0.1
 
-Beta release of VSCuda
+Beta release of VSCuda 
+> Test and report any bugs you find
+
+## Acknowledgement 
+
+Texmate file for Syntax Highliter is based on https://github.com/kriegalex/vscode-cuda/tree/develop
+
