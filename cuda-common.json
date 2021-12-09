@@ -1,57 +1,57 @@
 [
     {
         "id": "cudaGetDevice",
-        "value": "​​cudaGetDevice( )"
+        "value": "cudaGetDevice( )"
     },
     {
         "id": "cudaGetDeviceCount",
-        "value": "​​cudaGetDeviceCount( )"
+        "value": "cudaGetDeviceCount( )"
     },
     {
         "id": "cudaGetDeviceFlags",
-        "value": "​cudaGetDeviceFlags( )"
+        "value": "cudaGetDeviceFlags( )"
     },
     {
         "id": "cudaGetDeviceProperties",
-        "value": "​cudaGetDeviceProperties( , )"
+        "value": "cudaGetDeviceProperties( , )"
     },
     {
         "id": "cudaChooseDevice",
-        "value": "​cudaChooseDevice( , )"
+        "value": "cudaChooseDevice( , )"
     },
     {
         "id": "cudaMemset",
-        "value": "​cudaMemset( , , )"
+        "value": "cudaMemset( , , )"
     },
     {
         "id": "cudaMemPrefetchAsync",
-        "value": "​cudaMemPrefetchAsync( , , , )"
+        "value": "cudaMemPrefetchAsync( , , , )"
     },
     {
         "id": "cudaMemAdvise",
-        "value": "​cudaMemAdvise( , , , )",
+        "value": "cudaMemAdvise( , , , )",
         "options": ""
     },
     {
         "id": "cudaHostAlloc",
-        "value": "​cudaHostAlloc( , , )"
+        "value": "cudaHostAlloc( , , )"
     },
     {
         "id": "cudaFreeHost",
-        "value": "​cudaFreeHost( )"
+        "value": "cudaFreeHost( )"
     }, 
     {
         "id": "cudaFreeAsync",
-        "value": "​cudaFreeAsync( , )"
+        "value": "cudaFreeAsync( , )"
     },
     {
         "id": "cudaMemcpyAsync",
-        "value": "​​cudaMemcpyAsync( , , , ${1|cudaMemcpyHostToDevice,cudaMemcpyDeviceToHost,cudaMemcpyHostToHost,cudaMemcpyDeviceToDevice,cudaMemcpyDefault|}, )",
+        "value": "cudaMemcpyAsync( , , , ${1|cudaMemcpyHostToDevice,cudaMemcpyDeviceToHost,cudaMemcpyHostToHost,cudaMemcpyDeviceToDevice,cudaMemcpyDefault|}, )",
         "options": ""
     },
     {
         "id": "cudaMallocAsync",
-        "value": "​cudaMallocAsync( , , )"
+        "value": "cudaMallocAsync( , , )"
     },
     {
         "id": "cudaMallocHost",
@@ -59,19 +59,19 @@
     },
     {
         "id": "cudaMallocManaged",
-        "value": "​cudaMallocManaged( , , )"
+        "value": "cudaMallocManaged( , , )"
     },
     {
         "id": "cudaDeviceSynchronize",
-        "value": "​​cudaDeviceSynchronize()"
+        "value": "cudaDeviceSynchronize()"
     },
     {
         "id": "cudaFree",
-        "value": "​​cudaFree( )"
+        "value": "cudaFree( )"
     },
     {
         "id": "cudaMemcpy",
-        "value": "​cudaMemcpy( , , , ${1|cudaMemcpyHostToDevice,cudaMemcpyDeviceToHost,cudaMemcpyHostToHost,cudaMemcpyDeviceToDevice,cudaMemcpyDefault|})",
+        "value": "cudaMemcpy( , , , ${1|cudaMemcpyHostToDevice,cudaMemcpyDeviceToHost,cudaMemcpyHostToHost,cudaMemcpyDeviceToDevice,cudaMemcpyDefault|})",
         "options": ""
     },
     {
