@@ -24,11 +24,31 @@ function activate(context) {
 		vscode.window.showInformationMessage('Hello VSCuda!');
 	});
 
+	let disposableLang = vscode.languages.registerHoverProvider('cuda', {
+		provideHover(document, position, token) {
+			console.log("Hurray! Hover is working");
+			console.log(position.toString());
+			console.log(token.toString());
+
+			const range = document.getWordRangeAtPosition(position);
+            const word = document.getText(range);
+			console.log(word);
+			if (word === "cudaMemCpy") {
+				console.log("Found: " + word);
+			} else {
+				console.log("Sorry bro! Found instead: ", word);
+			}
+
+			return new vscode.Hover(word);
+		}
+	});
+
 	context.subscriptions.push(disposable);
+	context.subscriptions.push(disposableLang);
 }
 
 // this method is called when your extension is deactivated
-function deactivate() {}
+function deactivate() { }
 
 module.exports = {
 	activate,

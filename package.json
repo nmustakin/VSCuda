@@ -10,7 +10,9 @@
 		"Other"
 	],
 	"activationEvents": [
-        "onCommand:vscuda.helloWorld"
+        "onCommand:vscuda.helloWorld",
+		"onLanguage:cuda",
+		"onLanguage:cpp"
 	],
 	"main": "./extension.js",
 	"contributes": {
@@ -18,6 +20,16 @@
             "command": "vscuda.helloWorld",
             "title": "Hello World"
 
+		}],
+		"languages": [{
+			"id": "cuda",
+			"extensions": [".cu"],
+			"aliases": ["Cuda", "cuda"]
+		},
+		{
+			"id": "cpp",
+			"extensions": [ ".cpp", "c++"],
+			"aliases": [ "Cpp", "C++", "cpp" ]
 		}]
 	},
 	"scripts": {
