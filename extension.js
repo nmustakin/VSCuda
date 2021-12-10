@@ -1,10 +1,14 @@
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
 const vscode = require('vscode');
+// Import the path module
+const path = require('path');
 // Import the json file which contains the cuda functions such as cudaMemcpy
 const cudaFuncs = require('./cuda-functions.json');
 // Import the json file which contains common cuda fucntion structures
 const cudaCommonFuncs = require('./cuda-common.json');
+
+let diagnosticCollection;
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
@@ -115,12 +119,42 @@ function activate(context) {
 		}
 	});
 	*/
+
+	diagnosticCollection = vscode.languages.createDiagnosticCollection('cuda');
+	if (vscode.window.activeTextEditor) {
+		updateDiagnostics(vscode.window.activeTextEditor.document, diagnosticCollection);
+	}
+	context.subscriptions.push(vscode.window.onDidChangeActiveTextEditor(editor => {
+		if (editor) {
+			updateDiagnostics(editor.document, diagnosticCollection);
+		}
+	}));
+
 	context.subscriptions.push(disposable);
 	context.subscriptions.push(disposableLang);
 	context.subscriptions.push(disposableDef);
 	context.subscriptions.push(disposableCompletionProvider);
 	//context.subscriptions.push(disposableReferenceProvider);
 }
+
+function updateDiagnostics(document, collection) {
+	console.log("updateDiagnostic");
+	if (document && path.basename(document.uri.fsPath) === 'x.cu') {
+		collection.set(document.uri, [{
+			code: '',
+			message: 'cannot assign twice to immutable variable `x`',
+			range: new vscode.Range(new vscode.Position(3, 4), new vscode.Position(3, 10)),
+			severity: vscode.DiagnosticSeverity.Error,
+			source: '',
+			relatedInformation: [
+				new vscode.DiagnosticRelatedInformation(new vscode.Location(document.uri, new vscode.Range(new vscode.Position(1, 8), new vscode.Position(1, 9))), 'first assignment to `x`')
+			]
+		}]);
+	} else {
+		collection.clear();
+	}
+}
+
 
 // this method is called when your extension is deactivated
 function deactivate() { }
